@@ -23,4 +23,14 @@ npx cap open android
 
 Run on device
 
-Press "strat live GPS" button
+Press "start live GPS" button
+
+```
+eoLocationWatchId = await Geolocation.watchPosition(
+    { enableHighAccuracy: true, timeout: 2000, maximumAge: 2500 },
+    (currentPosition: Position | null) => {
+```
+
+Although the code says 2000ms the delay between 2 measurements is way longer
+
+![image](https://user-images.githubusercontent.com/644550/223717435-0dc8aeba-c537-4c9f-8019-9b86e8170312.png)
